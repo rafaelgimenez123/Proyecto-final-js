@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Juan Pérez",
+        "curso": "3er año",
+        "edad": "20 años",
+        "descripcion": "Estudiante destacado en matematicas"
+    },
+    {
+        "nombre": "Camila martinez",
+        "curso": "3er año",
+        "edad": "23 años",
+        "descripcion": "Estudiante destacado en Quimica"
+    },
+    {
+        "nombre": "Nicolas boretto",
+        "curso": "3er año",
+        "edad": "22 años",
+        "descripcion": "Estudiante destacado en Fisica nuclear"
+    },
+    {
+        "nombre": "Mariano Vanderusten",
+        "curso": "3er año",
+        "edad": "21 años",
+        "descripcion": "Estudiante destacado en Trigonometria"
+    }
+]

@@ -42,13 +42,29 @@ const createAlumnoElement = (alumno) => {
   `;
   return Alumno_element;
 };
-
 const CrearAlumno = (event) => {
   event.preventDefault();
+
   if (![alumno_nombre, alumno_curso, alumno_edad, alumno_descripcion].every((element) => element.value)) {
     Swal.fire('Ingresa todos los campos para continuar');
     return;
   }
+
+  if (
+    alumno_nombre.value.length > 20 ||
+    alumno_curso.value.length > 20 ||
+    alumno_edad.value.length > 20 ||
+    alumno_descripcion.value.length > 20
+  ) {
+    Swal.fire('La longitud de los caracteres no puede ser mayor a 20');
+    return;
+  }
+
+  Swal.fire(
+    'Listo!',
+    '¡Alumno registrado!',
+    'success'
+  );
 
   const nuevoAlumno = new Alumno(
     alumno_nombre.value,
@@ -64,6 +80,7 @@ const CrearAlumno = (event) => {
   const Alumno_element = createAlumnoElement(nuevoAlumno);
   contenedor_alumno.appendChild(Alumno_element);
 };
+
 
 function mostrarAlumnos() {
   const contenedor_alumno = document.getElementById("contenedor_alumnos");
@@ -82,3 +99,4 @@ form.addEventListener("submit", CrearAlumno);
   await cargarAlumnos();
   mostrarAlumnos();
 })();
+localStorage.clear()

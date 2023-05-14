@@ -128,7 +128,7 @@ width: 100%;
  }
  
  button[type="submit"] {
-   background-color: green;
+   background-color: #20A464;
    color: #fff;
    padding: 10px 20px;
    border: none;
@@ -168,3 +168,10 @@ width: 100%;
    justify-content: space-around;
    flex-wrap: wrap;
 }
+.container_card h3 {
+   display: flex;
+   background-color:#20A464;
+   justify-content: center;
+   border-radius: 5px;
+   width: 80%;
+}  
